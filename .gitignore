@@ -1,0 +1,49 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest cache
+.cache/
+
+# Coverage reports
+.coverage
+.coverage.*
+
+# Test and build directories
+build/
+dist/
+*.egg-info/
+
+# Python environment files
+Pipfile.lock
+poetry.lock
+
+# Logs
+*.log
+
+# .env file for environment variables
+.env
+
+# Operating system files
+.DS_Store
+Thumbs.db

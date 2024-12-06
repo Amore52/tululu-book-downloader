@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/library_parser.iml" filepath="$PROJECT_DIR$/.idea/library_parser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tululu-book-downloader.iml" filepath="$PROJECT_DIR$/.idea/tululu-book-downloader.iml" />
     </modules>
   </component>
 </project>
