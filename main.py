@@ -81,17 +81,17 @@ def download_book(book_id):
     if not page_content:
         return
 
-    book_info = parse_book_page(page_content)
-    title, genre, author = book_info['title'], book_info['genre'], book_info['author']
+    book_details = parse_book_page(page_content)
+    title, genre, author = book_details['title'], book_details['genre'], book_details['author']
     filename = title.split('::')[0].strip()
     print(f"{filename} - Жанр: {genre} - Автор: {author}\n")
     params = {'id': book_id}
     download_url = urlunparse(('https', 'tululu.org', '/txt.php', '', urlencode(params), ''))
     download_file(download_url, 'books', f"{book_id}. {filename}.txt")
-    if book_info['cover_url']:
-        cover_url = f"https://tululu.org{book_info['cover_url']}"
+    if book_details['cover_url']:
+        cover_url = f"https://tululu.org{book_details['cover_url']}"
         download_file(cover_url, 'images', os.path.basename(unquote(urlsplit(cover_url).path)))
-    save_comments(book_info['comments'], book_id)
+    save_comments(book_details['comments'], book_id)
 
 
 def download_books(start_id, end_id):
