@@ -96,7 +96,7 @@ def download_book(book_id):
 
 def download_books(start_id, end_id):
     for book_id in range(start_id, end_id + 1):
-        download_book(book_id)
+        yield book_id
 
 
 if __name__ == "__main__":
@@ -105,4 +105,7 @@ if __name__ == "__main__":
     parser.add_argument('end_id', type=int, help="ID последней книги для скачивания")
 
     args = parser.parse_args()
-    download_books(args.start_id, args.end_id)
+
+    # Генератор книг и обработка каждой
+    for book_id in download_books(args.start_id, args.end_id):
+        download_book(book_id)
